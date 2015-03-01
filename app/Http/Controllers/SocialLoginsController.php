@@ -27,7 +27,7 @@ class SocialLoginsController extends Controller implements AuthenticateUserListe
      */
     public function userHasLoggedIn($user)
     {
-        return redirect('/');
+        return redirect('student');
     }
 
 
