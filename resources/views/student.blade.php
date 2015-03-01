@@ -325,7 +325,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<!--<img alt="" src="assets/img/avatar1_small.jpg" />-->
 						<i class="icon-male"></i>
-						<span class="username">John Doe</span>
+						<span class="username">{{ Auth::user()->name }}</span>
 						<i class="icon-caret-down small"></i>
 					</a>
 					<ul class="dropdown-menu">
@@ -333,7 +333,7 @@
 						<li><a href="pages_calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>
 						<li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
 						<li class="divider"></li>
-						<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+						<li><a href="/auth/logout"><i class="icon-key"></i> Log Out</a></li>
 					</ul>
 				</li>
 				<!-- /user login dropdown -->
@@ -458,7 +458,7 @@
 									<span class="label label-info"><i class="icon-file-text"></i></span>
 								</div>
 								<div class="col-right with-margin">
-									<span class="message"><strong>John Doe</strong> received $1.527,32</span>
+									<span class="message"><strong>{{ Auth::user()->name }}</strong> received $1.527,32</span>
 									<span class="time">finances.xls</span>
 								</div>
 							</a>
@@ -469,7 +469,7 @@
 									<span class="label label-success"><i class="icon-file-text"></i></span>
 								</div>
 								<div class="col-right with-margin">
-									<span class="message">My name is <strong>John Doe</strong> ...</span>
+									<span class="message">My name is <strong>{{ Auth::user()->name }}</strong> ...</span>
 									<span class="time">briefing.docx</span>
 								</div>
 							</a>
@@ -787,7 +787,7 @@
 				<div class="page-header">
 					<div class="page-title">
 						<h3>User Profile</h3>
-						<span>Good morning, John!</span>
+						<span>Good morning, {{ Auth::user()->name }}!</span>
 					</div>
 
 					<!-- Page Stats -->
@@ -843,7 +843,7 @@
 										<div class="row profile-info">
 											<div class="col-md-7">
 												<div class="alert alert-info">You will receive all future updates for free!</div>
-												<h1>John Doe</h1>
+												<h1>{{ Auth::user()->name }}</h1>
 
 												<dl class="dl-horizontal">
 													<dt>Description lists</dt>
